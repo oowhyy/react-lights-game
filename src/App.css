@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  border: 1px solid red;
+}
+
+
+.App-main {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.bulb {
+  display: flex;
+  background-color: gold;
+  width: calc(50px + 10vmin);
+  height: calc(50px + 10vmin);
+  border-radius: 50%;
+}
+.inner-bulb {
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: lightyellow;
+}
+
