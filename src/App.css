@@ -1,56 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 * {
-  margin: 0px;
+   margin: 0px;
 }
 
 .App {
-  text-align: center;
+   text-align: center;
+   font-family: 'Source Sans Pro', sans-serif;
+   letter-spacing: normal;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-  border: 1px solid red;
+   height: 40vmin;
+   pointer-events: none;
+   border: 1px solid red;
 }
 
+h1 {
+   margin: 10px;
+}
+
+h3 {
+   margin-bottom: 30px;
+}
 
 .App-main {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+   background-color: #282c34;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: calc(10px + 2vmin);
+   color: white;
+
 }
 
 .bulb {
-  display: flex;
-  width: calc(50px + 10vmin);
-  height: calc(50px + 10vmin);
-  border-radius: 50%;
+   display: flex;
+   width: calc(50px + 10vmin);
+   height: calc(50px + 10vmin);
+   border-radius: 50%;
 }
 
 .inner-bulb {
-  margin: auto;
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
+   margin: auto;
+   width: 50%;
+   height: 50%;
+   border-radius: 50%;
+   display: flex;
+}
 
+.solution {
+   margin: auto;
+   width: 20%;
+   height: 20%;
+   border-radius: 50%;
+   background-color: red;
 }
 
 .bulb.on {
-  background-color: gold;
+   background-color: gold;
 }
 
 .inner-bulb.on {
-  background-color: lightyellow;
+   background-color: lightyellow;
 }
 
 .bulb.off {
-  background-color: rgb(113, 113, 113);
+   background-color: rgb(113, 113, 113);
 }
 
 .inner-bulb.off {
-  background-color: rgb(88, 88, 88);
+   background-color: rgb(88, 88, 88);
 }
