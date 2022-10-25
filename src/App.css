@@ -1,6 +1,7 @@
 * {
   margin: 0px;
 }
+
 .App {
   text-align: center;
 }
@@ -22,18 +23,34 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .bulb {
   display: flex;
-  background-color: gold;
   width: calc(50px + 10vmin);
   height: calc(50px + 10vmin);
   border-radius: 50%;
 }
+
 .inner-bulb {
   margin: auto;
   width: 50%;
   height: 50%;
   border-radius: 50%;
+
+}
+
+.bulb.on {
+  background-color: gold;
+}
+
+.inner-bulb.on {
   background-color: lightyellow;
 }
 
+.bulb.off {
+  background-color: rgb(113, 113, 113);
+}
+
+.inner-bulb.off {
+  background-color: rgb(88, 88, 88);
+}
