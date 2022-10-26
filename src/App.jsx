@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Game from './components/Game';
 
 function App() {
-   const [showSolution, setShowSolution] = useState(false);
+
 
 
    return (
