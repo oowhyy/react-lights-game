@@ -14,9 +14,9 @@ const gridStyle = {
 
 
 
-export default function Board({ }) {
+export default function Board({ isSolution }) {
    const [bulbs, setBulbs] = useState(initBulbs(rows, cols));
-   const [test, setTest] = useState(0);
+
    const neighbours = useMemo(() => initNeighbours(rows, cols), [rows, cols])
    useEffect(() => {
       let active = true;
@@ -72,8 +72,8 @@ export default function Board({ }) {
    }
 
    return (
-      <div style={gridStyle}>
-         {bulbs.map((bulb) => <Bulb key={bulb.id} bulb={bulb} onClick={flip}></Bulb>)}
+      <div className='board' style={gridStyle}>
+         {bulbs.map((bulb) => <Bulb isSolution={isSolution} key={bulb.id} bulb={bulb} onClick={flip}></Bulb>)}
       </div>
    )
 }

@@ -1,21 +1,26 @@
 import React from 'react';
 import './App.css';
-import Bulb from './components/Bulb';
+
 import { useState } from 'react';
-import Board from './components/Board';
+
+import Game from './components/Game';
 
 function App() {
-   const [on, setOn] = useState(false);
-   function handleClick() {
-      setOn(p => !p);
-   }
+   const [showSolution, setShowSolution] = useState(false);
+
+
    return (
       <div className="App">
          <main className="App-main">
-            <div className="title"><h1>The game of lights</h1></div>
-            <div className="description"><h3>Turn all the bulbs on!</h3></div>
-            <Board></Board>
+            <div className="title">
+               <h1 className="name">The game of lights</h1>
+               <h3 className="description">Turn all the bulbs on!</h3>
+            </div>
+            <Game></Game>
+
+
          </main>
+         <footer className="footer">Made with reactjs</footer>
       </div>
    );
 }
