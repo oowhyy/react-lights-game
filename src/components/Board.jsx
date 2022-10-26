@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 function coinflip() {
    return Math.random() < 0.5;
 }
-const [rows, cols] = [4, 4];
+const [rows, cols] = [5, 5];
 const gridStyle = {
    display: "grid",
    gridTemplateColumns: `repeat(${cols}, 1fr)`,
@@ -14,9 +14,8 @@ const gridStyle = {
 
 
 
-export default function Board({ isSolution }) {
+export default function Board({ isSolution, pseudoSeed }) {
    const [bulbs, setBulbs] = useState(initBulbs(rows, cols));
-
    const neighbours = useMemo(() => initNeighbours(rows, cols), [rows, cols])
    useEffect(() => {
       let active = true;
@@ -24,7 +23,7 @@ export default function Board({ isSolution }) {
          shuffle(rows * cols)
       }
       return () => { active = false }
-   }, [])
+   }, [pseudoSeed])
 
    function initBulbs(m, n) {
       let arr = []
@@ -54,7 +53,7 @@ export default function Board({ isSolution }) {
       return arr;
    }
    function shuffle(total) {
-      console.log('shuffled')
+      // console.log('shuffled')
       for (let i = 0; i < total; i++) {
          if (coinflip()) {
             flip(i);
@@ -73,6 +72,7 @@ export default function Board({ isSolution }) {
 
    return (
       <div className='board' style={gridStyle}>
+         {/* <div>{pseudoSeed}</div> */}
          {bulbs.map((bulb) => <Bulb isSolution={isSolution} key={bulb.id} bulb={bulb} onClick={flip}></Bulb>)}
       </div>
    )

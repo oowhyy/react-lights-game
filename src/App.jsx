@@ -13,8 +13,8 @@ function App() {
       <div className="App">
          <main className="App-main">
             <div className="title">
-               <h1 className="name">The game of lights</h1>
-               <h3 className="description">Turn all the bulbs on!</h3>
+               <h1 className="name">The bulb game</h1>
+               <h3 className="description">Turn all the lights on!</h3>
             </div>
             <Game></Game>
 

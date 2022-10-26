@@ -3,14 +3,15 @@ import Board from './Board';
 import Button from './button/Button';
 export default function Game({ }) {
 	const [showSolution, setShowSolution] = useState(false);
+	const [pseudoSeed, setPseudoSeed] = useState(false);
 	return (
 		<div className="game">
 
-			<Board isSolution={showSolution}></Board>
+			<Board isSolution={showSolution} pseudoSeed={pseudoSeed}></Board>
 
 			<div className="button-container">
 
-				<Button>Shuffle</Button>
+				<Button onClick={() => { setPseudoSeed(!pseudoSeed) }}>Shuffle</Button>
 				<Button onClick={() => { setShowSolution(!showSolution) }}>{showSolution ? 'Hide' : 'Show'} solution</Button>
 			</div>
 		</div>
