@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Board from './Board';
 import Button from './button/Button';
-export default function Game({ }) {
+export default function Game() {
 	const [showSolution, setShowSolution] = useState(false);
 	const [pseudoSeed, setPseudoSeed] = useState(false);
 	return (
