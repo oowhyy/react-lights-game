@@ -1,2 +1,3 @@
 # react-lights-game
-Turn all the lights on (WIP)
+Turn all the lights on
+
